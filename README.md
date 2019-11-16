@@ -1,3 +1,7 @@
+# Will's attempted updates
+* Got python testing working on windows (need to specify interpreter name)
+* Added basic checking for numeric precision errors through `--precision <p>` argument to `test.py` script.
+* Still need to check for correct structure
 # Kattis Grind
 A small easy-to-use package of Python 3 scripts which can help speed up the process for competitive programming on [Kattis](https://open.kattis.com). The scripts will download a local copy of the question (html file), and can automate testing inputs / outputs.
 

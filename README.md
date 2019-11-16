@@ -1,5 +1,5 @@
 # This is where I plan to store solutions to kattis problems in the future
-I'm currently adding some functionalities which Chris (@chrismacdonaldw) may choose to incorporate later.
+I'm currently adding some functionalities which [Chris](https://github.com/chrismacdonaldw) may choose to incorporate later.
 
 # Will's attempted updates
 * Got python testing working on windows (need to specify interpreter name)

@@ -25,8 +25,7 @@ while qext != 'cpp' and qext[0] != 'p':
     qext = input('Which language (python/cpp) (if python, specify interpreter name e.g. python3): ').lower()
 
 if qext[0] == 'p':
-    if ISON_WINDOWS:
-        EXE_NAME = '%s "%s"'%(qext,os.path.join(qdir,'_%s.py'%qid))
+    EXE_NAME = '%s "%s"'%(qext,os.path.join(qdir,'_%s.py'%qid))
 
 isinfile_inqdir = lambda name: name.startswith("input") and os.path.isfile(os.path.join(qdir,name))
 input_files = list(filter(isinfile_inqdir, os.listdir(qdir)))

@@ -21,6 +21,7 @@ parser.add_argument('--hint', type=bool, default=False, help='includes hint from
 args = parser.parse_args()
 qid = args.id
 hint = args.hint
+ISON_WINDOWS = sys.platform=='win32'
 
 if qid == '_NONE_':
     qid = input('Enter ID: ')
@@ -84,9 +85,10 @@ dstfile = os.path.join(dst,'template.cpp')
 newfile = os.path.join(dst,'_' + qid + '.cpp')
 os.rename(dstfile, newfile)
 
-with open('/' + os.getcwd() + '/' + qid + '/_' + qid + '.py', 'w+') as py:
+with open(('/' if not ISON_WINDOWS else '') + os.getcwd() + '/' + qid + '/_' + qid + '.py', 'w+') as py:
     py.write('#!/usr/bin/env python3\n')
-    os.chmod('/' + os.getcwd() + '/' + qid + '/_' + qid + '.py', 0o777)
+    if not ISON_WINDOWS:
+        os.chmod('/' + os.getcwd() + '/' + qid + '/_' + qid + '.py', 0o777)
 
 if not os.path.isfile('./seen.txt'):
     open('seen.txt', 'w+')

@@ -17,12 +17,12 @@ foo@bar:~$ pip3 install fake-useragent
 ```
 # How do I use it?
 ## Fetch a question
-```
+```console
 foo@bar:~/kattis-grind$ ./fetch.py
 Enter ID:
-```
+```console
 If you prefer to use command line arguments instead, you can! For example, if I wanted to get question 'hello':
-```
+```console
 foo@bar:~/kattis-grind$ ./fetch.py --id hello
 ```
 
@@ -36,7 +36,7 @@ Similarly to fetching a question, you can pass in an optional ID argument! Using
 foo@bar:~/kattis-grind$ ./test.py --id hello
 ```
 The `--precision` argument automatically checks numeric precision of output. The below example tests a problem with max error 1/10000.
-```
+```console
 foo@bar:~/kattis-grind$ ./test.py --id tetration --precision 0.00001
 ```
 *Note: On windows, the python interpreter must be referenced when running a script.*

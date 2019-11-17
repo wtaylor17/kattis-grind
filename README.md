@@ -20,7 +20,7 @@ foo@bar:~$ pip3 install fake-useragent
 ```console
 foo@bar:~/kattis-grind$ ./fetch.py
 Enter ID:
-```console
+```
 If you prefer to use command line arguments instead, you can! For example, if I wanted to get question 'hello':
 ```console
 foo@bar:~/kattis-grind$ ./fetch.py --id hello
